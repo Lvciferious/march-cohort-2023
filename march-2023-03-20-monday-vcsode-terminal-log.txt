@@ -1,0 +1,185 @@
+const obj = {};
+
+obj.firstKey = 'firstKey';
+obj.firstKey = '2';
+obj.firstKey = 'false';
+obj.firstKey = '{}';
+
+
+console.log(obj['firstKey']);       // firstValue
+console.log(obj['numeric']);        // 2
+console.log(obj['boolean']);        // false
+console.log(obj['object']);         // {}
+
+
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        week-2/
+
+nothing added to commit but untracked files present (use "git add" to track)
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ node
+Welcome to Node.js v16.19.1.
+Type ".help" for more information.
+>
+(To exit, press Ctrl+C again or Ctrl+D or type .exit)
+>
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ ls
+remastery  week-2
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ cd week-2
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ ls
+w2-mon-declare-values-keys.js
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ node w2-mon-declare-values-keys.js
+{}
+undefined
+undefined
+undefined
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ node
+Welcome to Node.js v16.19.1.
+Type ".help" for more information.
+> ls
+Uncaught ReferenceError: ls is not defined
+>
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ ls
+w2-mon-declare-values-keys.js
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ cd w2-mon-declare-values-keys.js
+-bash: cd: w2-mon-declare-values-keys.js: Not a directory
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ node
+Welcome to Node.js v16.19.1.
+Type ".help" for more information.
+> node w2-mon-declare-values-keys.js
+node w2-mon-declare-values-keys.js
+     ^^
+
+Uncaught SyntaxError: Unexpected identifier
+>
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ ls
+w2-mon-declare-values-keys.js
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ node w2-mon-declare-values-keys.js 
+{}
+undefined
+undefined
+undefined
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$
+
+
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ node
+Welcome to Node.js v16.19.1.      
+Type ".help" for more information.
+> node w2-mon-declare-values-keys.js
+node w2-mon-declare-values-keys.js
+     ^^
+
+Uncaught SyntaxError: Unexpected identifier
+>
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ node w2-mon-declare-values-keys.js 
+node:internal/modules/cjs/loader:1024
+  throw err;
+  ^
+
+Error: Cannot find module '/home/akumasan/march-cohort-2023/w2-mon-declare-values-keys.js'
+    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:1021:15)        
+    at Function.Module._load (node:internal/modules/cjs/loader:866:27)
+    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:81:12) 
+    at node:internal/main/run_main_module:22:47 {
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        ./
+
+nothing added to commit but untracked files present (use "git add" to track)
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023/week-2$ cd ..
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ ls
+remastery  week-2
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        week-2/
+
+nothing added to commit but untracked files present (use "git add" to track)
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git add .
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git commit -m 'week-2'
+[master db2957e] week-2
+ 1 file changed, 21 insertions(+)
+ create mode 100644 week-2/w2-mon-declare-values-keys.js
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git push
+Username for 'https://github.com': akumaluna
+Password for 'https://akumaluna@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/akumaluna/march-cohort-2023.git/'
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git remote add origin https://github.com/akumaluna/march-cohort-2023.git
+fatal: remote origin already exists.
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git push
+Username for 'https://github.com': akumaluna
+Password for 'https://akumaluna@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/akumaluna/march-cohort-2023.git/'
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git push
+Username for 'https://github.com': akumaluna
+Password for 'https://akumaluna@github.com': 
+remote: Permission to akumaluna/march-cohort-2023.git denied to akumaluna.
+fatal: unable to access 'https://github.com/akumaluna/march-cohort-2023.git/': The requested URL returned error: 403
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git config --list
+user.name=akumasan
+user.email=ldlvvna@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/akumaluna/march-cohort-2023.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git push https://github.com/akumaluna/march-cohort-2023.git
+Username for 'https://github.com': akumaluna
+Password for 'https://akumaluna@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/akumaluna/march-cohort-2023.git/'
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git push origin master
+Username for 'https://github.com': akumaluna
+Password for 'https://akumaluna@github.com': 
+remote: Permission to akumaluna/march-cohort-2023.git denied to akumaluna.
+fatal: unable to access 'https://github.com/akumaluna/march-cohort-2023.git/': The requested URL returned error: 403
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git config --list
+user.name=akumasan
+user.email=ldlvvna@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/akumaluna/march-cohort-2023.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ git push
+Username for 'https://github.com': akumaluna
+Password for 'https://akumaluna@github.com': 
+Counting objects: 4, done.
+Delta compression using up to 6 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 478 bytes | 478.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0)
+To https://github.com/akumaluna/march-cohort-2023.git
+   36850e9..db2957e  master -> master
+akumasan@DESKTOP-440MUM2:~/march-cohort-2023$ 
