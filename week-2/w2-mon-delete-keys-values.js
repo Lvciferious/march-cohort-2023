@@ -12,7 +12,4 @@ const obj = {
 
 delete obj.first
 
-// Write your solution here.
-// Do deletion here
-
 console.log(obj);               // {}
