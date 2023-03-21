@@ -6,6 +6,7 @@ and returns true if that key exists on the object or false otherwise.
 
 */
 
+
 const obj = {
     first: "1",
     second: 2,
