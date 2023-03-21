@@ -1,6 +1,8 @@
 /*
 
-
+Declare Keys/Values
+Given the following declaration of an object, obj below, declare values so
+that the print statements output what is expected. Try using both dot and bracket notation.
 
 */
 
